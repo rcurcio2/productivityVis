@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<!--    <script src="bootstrap.bundle.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ryan's Life</title>
+
+    <style>
+        body{
+            background: #383838 !important;
+        }
+        * {
+            font-family: "Helvetica Neue";
+        }
+        svg {
+            background: #383838;
+        }
+        .header-1 {
+            font-family: 'Helvetica W01 Bold', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: -1px;
+            line-height: 45px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        .content-1 {
+            font-family: 'Helvetica W01 Bold', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 30px;
+            text-transform: none;
+            color: #cccccc;
+        }
+    </style>
+
+</head>
+<body>
+<div class="containter">
+    <div class="row">
+        <div class="col-4">
+            <div class="card border-light text-white text-center mx-auto mt-5" style="width: 25rem; height: 53rem; background: #383838 !important;">
+                <div class="card-body">
+                    <br>
+                    <br>
+                    <span class="card-title header-1"><h1>Productivity</h1><h3>v.</h3><h1>Activity</h1></span>
+                    <br>
+
+                    <span class="content-1">A year of online college is no easy task. Since all of my time is spent at home, it is simpler than ever to procrastinate and get distracted. In order to keep myself active, I decided to track my productivity and activity. To be fair, I kept mandatory Zoom hours out of my productivity hours. Explore the graph on the right to understand my habits and life during Spring 2021.  </span>
+                    <img src="scale.png" width="80%">
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="btn-group btn-group-toggle mt-5" data-toggle="buttons" style="padding: 10px;">
+                <label class="btn btn-secondary" id="ex">
+                    <input type="radio" name="options" autocomplete="off"> Excersize
+                </label>
+                <label class="btn btn-secondary" id="prod">
+                    <input type="radio" name="options" autocomplete="off"> Productivity
+                </label>
+                <label class="btn btn-secondary active" id="total">
+                    <input type="radio" name="options" autocomplete="off" checked> Total
+                </label>
+            </div>
+
+            <div class="btn-group btn-group-toggle mt-5" data-toggle="buttons">
+                <label class="btn btn-secondary" id="day" >
+                    <input type="radio" name="options" autocomplete="off"> Day's
+                </label>
+                <label class="btn btn-secondary" id="weekend">
+                    <input type="radio" name="options" autocomplete="off"> Weekend
+                </label>
+                <label class="btn btn-secondary active" id="center">
+                    <input type="radio" name="options" autocomplete="off" checked> Center
+                </label>
+            </div>
+            <br>
+            <img src="colorLegend.png" width="40%;">
+
+            <div id="vis"></div>
+            <div id="detail"></div>
+        </div>
+
+    </div>
+</div>
+
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="visual.js"></script>
+
+</body>
+</html>
